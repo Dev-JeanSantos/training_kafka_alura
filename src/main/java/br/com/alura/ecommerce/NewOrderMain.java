@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
 public class NewOrderMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         var producer = new KafkaProducer<String, String>(properties());
-        var value = "12345, 12345, 34400,00";
+        var value = "12345, 12345, 8984023,33";
         var record = new ProducerRecord<>("ECOMERCE_NEW_ORDER", value, value);
         //Produção de Mensagens
         producer.send(record, (data, ex) -> {
